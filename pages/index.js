@@ -1,14 +1,14 @@
 import Head from "next/head";
-import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import LargeCard from "../components/LargeCard";
 import MediumCard from "../components/MediumCard";
+import Banner from "../components/Banner";
 import SmallCard from "../components/SmallCard";
 
 export default function Home({ exploreData, cardsData }) {
   return (
-    <div className="">
+    <div className="w-screen">
       <Head>
         <title>Airbnb</title>
         <link rel="icon" href="/favicon.ico" />
@@ -16,7 +16,7 @@ export default function Home({ exploreData, cardsData }) {
       <Header />
       <Banner />
 
-      <main className="max-w-7xl mx-auto px-8 sm:px-16">
+      <main className="max-w-screen-2xl mx-auto px-8 sm:px-16">
         <section className="pt-6">
           <h2 className="text-4xl font-semibold pb-5">Explore Nearby</h2>
           {/* Pull data from server */}
@@ -32,6 +32,13 @@ export default function Home({ exploreData, cardsData }) {
           </div>
         </section>
 
+        <LargeCard
+          img="https://a0.muscache.com/im/pictures/258b129d-d1cd-48b5-86d4-86206c13ebf7.jpg?im_w=1440"
+          subTitle="Not sure where to go? Perfect."
+          buttonText="I'm flexable"
+          theme="black"
+        />
+
         <section>
           <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
           <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3">
@@ -42,10 +49,11 @@ export default function Home({ exploreData, cardsData }) {
         </section>
 
         <LargeCard
-          img="https://links.papareact.com/4cj"
-          title="The Greatest Outdoors"
-          description="Wishlists curated by Airbnb"
-          buttonText="Get Inspired"
+          img="https://a0.muscache.com/im/pictures/5b4dc94a-0b4c-4c27-b50f-9c5a5b93c775.jpg?im_w=720"
+          title="Try hosting"
+          description="Earn extra income and unlock new opportunities by sharing your space"
+          buttonText="Learn more"
+          theme="white"
         />
       </main>
       <Footer />

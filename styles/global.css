@@ -1,7 +1,30 @@
 @tailwind components;
+@tailwind utilities;
 
 @layer components {
   .button {
-    @apply px-4 py-1 border rounded-full cursor-pointer hover:shadow-lg active:scale-95 active:bg-gray-100 transition transform duration-100 ease-out;
+    @apply px-4 py-1 border rounded-full cursor-pointer hover:border-red-400 hover:shadow-md active:scale-95 active:bg-gray-100 transition transform duration-100 ease-out;
+  }
+  .span {
+    @apply py-1 px-2 border-[1px] border-red-400 hover:shadow-md cursor-pointer hover:bg-red-200 rounded-full transition transform duration-100 ease-out;
+  }
+}
+
+@layer utilities {
+  .bg-custom-blur {
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(255, 255, 255, 0.72);
+  }
+  .header__onTopText {
+    color: rgb(34, 34, 34);
+  }
+
+  .header__searchSwitch {
+    border: 1px solid rgb(248, 113, 113);
+    background-color: transparent;
+  }
+  .header__menuSwitch {
+    background-color: transparent;
+    border: 2px solid rgb(248, 113, 113);
   }
 }

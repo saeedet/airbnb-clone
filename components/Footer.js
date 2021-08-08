@@ -2,10 +2,15 @@ import React from "react";
 
 function Footer() {
   const footerOptions = (title, options) => (
-    <div className="space-y-4 text-xs text-gray-800">
+    <div className="space-y-4 text-xs text-gray-800 text-center md:text-left border-t-2 pt-2 md:pt-0 md:border-none">
       <h5 className="font-bold">{title}</h5>
       {options.map((item) => (
-        <p className="cursor-pointer hover:underline">{item}</p>
+        <p
+          key={Math.random()}
+          className="cursor-pointer hover:underline whitespace-nowrap"
+        >
+          {item}
+        </p>
       ))}
     </div>
   );
