@@ -102,6 +102,7 @@ function Header({ placeholder, searchHeader }) {
         <SearchIcon
           className="md:mx-2 hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer"
           style={{ transform: `rotate(${searchIconDeg / 10}deg)` }}
+          onClick={searchHandler}
         />
       </div>
 

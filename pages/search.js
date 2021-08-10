@@ -15,7 +15,7 @@ function Search({ searchResults }) {
   const range = `${formattedStartDate} - ${formattedEndDate}`;
   const totalDays =
     (new Date(endDate).getTime() - new Date(startDate).getTime()) /
-    (1000 * 3600 * 24);
+      (1000 * 3600 * 24) || 1;
 
   return (
     <div>
