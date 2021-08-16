@@ -1,7 +1,23 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/dist/client/router";
 
 function LargeCard({ img, title, description, buttonText, subTitle, theme }) {
+  const router = useRouter();
+
+  const clickHandler = () => {
+    const startDate = new Date();
+    router.push({
+      pathname: "/search",
+      query: {
+        location: "Sydney",
+        startDate: startDate.toISOString(),
+        endDate: startDate.toISOString(),
+        numberOfGuest: 1,
+      },
+    });
+  };
+
   return (
     <section className="relative py-16 cursor-pointer">
       <div className="relative h-[400px] md:h-[500px] min-w-full">
@@ -23,6 +39,7 @@ function LargeCard({ img, title, description, buttonText, subTitle, theme }) {
           <p className="text-xl text-white ">{description}</p>
 
           <button
+            onClick={clickHandler}
             className={`text-sm font-semibold px-5 py-3 rounded-lg mt-5 hover:shadow-xl active:scale-95 transition duration-150  ${
               title ? "text-black bg-white" : "text-white bg-gray-900"
             }`}

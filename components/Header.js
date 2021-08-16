@@ -11,7 +11,6 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
 import { useRouter } from "next/dist/client/router";
-import { ScaleControl } from "react-map-gl";
 
 function Header({ placeholder, searchHeader }) {
   const [searchInput, setSearchInput] = useState("");
